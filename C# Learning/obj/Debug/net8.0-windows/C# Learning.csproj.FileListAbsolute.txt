@@ -1,0 +1,37 @@
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\C# Learning.exe
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\C# Learning.deps.json
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\C# Learning.runtimeconfig.json
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\C# Learning.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\C# Learning.pdb
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\EntityFramework.SqlServer.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\EntityFramework.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C# Learning.csproj.AssemblyReference.cache
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C__Learning.Form1.resources
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C# Learning.csproj.GenerateResource.cache
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C# Learning.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C# Learning.AssemblyInfoInputs.cache
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C# Learning.AssemblyInfo.cs
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C# Learning.csproj.CoreCompileInputs.cache
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C# Learn.204AE07B.Up2Date
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C# Learning.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\refint\C# Learning.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C# Learning.pdb
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C# Learning.genruntimeconfig.cache
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\ref\C# Learning.dll
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C__Learning.Properties.Resources.resources
