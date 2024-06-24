@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace C__Learning.Class
 {
-    internal class ReleaseMethod
+    public class ReleaseMethod
     {
+          
+
+        public ReleaseMethod() 
+        {
+            
+        }
+        public void release(object sender, EventArgs e) 
+        {
+            //string code = ("update airplane set isbusy=0,firstname='',lastname='',documment='',email='' where code='"++"'");
+        }
     }
 }

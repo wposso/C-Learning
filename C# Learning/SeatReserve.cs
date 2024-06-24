@@ -5,13 +5,14 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace C__Learning
 {
-    public partial class Form1 : Form
+    public partial class SeatReserve : Form
     {
         private Dictionary<string, Button> buttonMap;
         private LoadInfo loadMethod;
         private UpdateStateMethod updateState;
 
-        public Form1()
+        private Button button;
+        public SeatReserve()
         {
             InitializeComponent();
             InitializeDatabaseConnection();
@@ -19,6 +20,7 @@ namespace C__Learning
             InitializeLoadMethod();
             InitializeUpdateStatus();
 
+            
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -50,7 +52,7 @@ namespace C__Learning
             loadMethod = new LoadInfo(buttonMap);
             loadMethod.loadInfo(this, EventArgs.Empty);
         }
-        private void InitializeUpdateStatus() 
+        private void InitializeUpdateStatus()
         {
             updateState = new UpdateStateMethod();
         }
@@ -58,6 +60,26 @@ namespace C__Learning
         private void button4_Click(object sender, EventArgs e)
         {
             InitializeLoadMethod();
+        }
+
+        public void btnrelease_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnco01_Click(object sender, EventArgs e)
+        {
+            btnrelease.Tag = "co01";
+        }
+
+        private void btnco02_Click(object sender, EventArgs e)
+        {
+            btnrelease.Tag = "co02";
+        }
+
+        private void btnco03_Click(object sender, EventArgs e)
+        {
+            btnrelease.Tag = "co03";
         }
     }
 

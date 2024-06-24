@@ -22,7 +22,6 @@ C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-wind
 C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C# Learning.csproj.AssemblyReference.cache
-C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C__Learning.Form1.resources
 C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C# Learning.csproj.GenerateResource.cache
 C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C# Learning.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C# Learning.AssemblyInfoInputs.cache
@@ -35,3 +34,6 @@ C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-wind
 C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C# Learning.genruntimeconfig.cache
 C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\ref\C# Learning.dll
 C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C__Learning.Properties.Resources.resources
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C# Learning.sourcelink.json
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C__Learning.LoginRegister.resources
+C:\Users\soporte MPOS\source\repos\C# Learning\C# Learning\obj\Debug\net8.0-windows\C__Learning.SeatReserve.resources
