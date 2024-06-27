@@ -28,20 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginRegister));
             label1 = new Label();
             label2 = new Label();
             btnsignin = new Button();
             chpassword = new CheckBox();
             label3 = new Label();
+            txtusername = new TextBox();
+            txtpassword = new TextBox();
             label4 = new Label();
-            txtusername1 = new TextBox();
-            txtusername2 = new TextBox();
+            label5 = new Label();
+            panel1 = new Panel();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(134, 204);
+            label1.Location = new Point(68, 335);
             label1.Name = "label1";
             label1.Size = new Size(75, 20);
             label1.TabIndex = 2;
@@ -50,7 +53,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(134, 275);
+            label2.Location = new Point(68, 400);
             label2.Name = "label2";
             label2.Size = new Size(70, 20);
             label2.TabIndex = 3;
@@ -58,73 +61,104 @@
             // 
             // btnsignin
             // 
-            btnsignin.Location = new Point(134, 467);
+            btnsignin.BackColor = SystemColors.Highlight;
+            btnsignin.FlatAppearance.BorderSize = 0;
+            btnsignin.FlatStyle = FlatStyle.Flat;
+            btnsignin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnsignin.ForeColor = Color.White;
+            btnsignin.Location = new Point(38, 580);
             btnsignin.Name = "btnsignin";
-            btnsignin.Size = new Size(241, 37);
+            btnsignin.Size = new Size(285, 37);
             btnsignin.TabIndex = 4;
-            btnsignin.Text = "Sign in";
-            btnsignin.UseVisualStyleBackColor = true;
+            btnsignin.Text = "SING IN";
+            btnsignin.UseVisualStyleBackColor = false;
             btnsignin.Click += btnsignin_Click;
             // 
             // chpassword
             // 
             chpassword.AutoSize = true;
-            chpassword.Location = new Point(241, 336);
+            chpassword.Location = new Point(175, 461);
             chpassword.Name = "chpassword";
             chpassword.Size = new Size(134, 24);
             chpassword.TabIndex = 5;
             chpassword.Text = "Show password";
             chpassword.UseVisualStyleBackColor = true;
+            chpassword.CheckedChanged += chpassword_CheckedChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semilight", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(193, 48);
+            label3.Font = new Font("Segoe UI Semibold", 20.2F, FontStyle.Bold);
+            label3.Location = new Point(68, 225);
             label3.Name = "label3";
-            label3.Size = new Size(129, 50);
+            label3.Size = new Size(255, 46);
             label3.TabIndex = 6;
-            label3.Text = "Sign In";
+            label3.Text = "Welcome Back!";
+            // 
+            // txtusername
+            // 
+            txtusername.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtusername.Location = new Point(68, 358);
+            txtusername.Name = "txtusername";
+            txtusername.Size = new Size(241, 34);
+            txtusername.TabIndex = 8;
+            // 
+            // txtpassword
+            // 
+            txtpassword.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtpassword.Location = new Point(68, 421);
+            txtpassword.Name = "txtpassword";
+            txtpassword.PasswordChar = '•';
+            txtpassword.Size = new Size(241, 34);
+            txtpassword.TabIndex = 9;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(182, 514);
+            label4.Cursor = Cursors.Hand;
+            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.Highlight;
+            label4.Location = new Point(127, 647);
             label4.Name = "label4";
-            label4.Size = new Size(149, 20);
-            label4.TabIndex = 7;
-            label4.Text = "Can you register here";
+            label4.Size = new Size(113, 20);
+            label4.TabIndex = 10;
+            label4.Text = "Create Account";
             // 
-            // txtusername1
+            // label5
             // 
-            txtusername1.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtusername1.Location = new Point(134, 227);
-            txtusername1.Name = "txtusername1";
-            txtusername1.Size = new Size(241, 34);
-            txtusername1.TabIndex = 8;
+            label5.AutoSize = true;
+            label5.Location = new Point(78, 277);
+            label5.Name = "label5";
+            label5.Size = new Size(220, 20);
+            label5.TabIndex = 11;
+            label5.Text = "Long in to your existing account";
             // 
-            // txtusername2
+            // panel1
             // 
-            txtusername2.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtusername2.Location = new Point(134, 296);
-            txtusername2.Name = "txtusername2";
-            txtusername2.Size = new Size(241, 34);
-            txtusername2.TabIndex = 9;
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Location = new Point(98, 23);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(177, 162);
+            panel1.TabIndex = 12;
             // 
             // LoginRegister
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(536, 651);
-            Controls.Add(txtusername2);
-            Controls.Add(txtusername1);
+            ClientSize = new Size(369, 697);
+            Controls.Add(panel1);
+            Controls.Add(label5);
             Controls.Add(label4);
+            Controls.Add(txtpassword);
+            Controls.Add(txtusername);
             Controls.Add(label3);
             Controls.Add(chpassword);
             Controls.Add(btnsignin);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "LoginRegister";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginRegister";
             ResumeLayout(false);
             PerformLayout();
@@ -139,8 +173,10 @@
         private Button btnsignin;
         private CheckBox chpassword;
         private Label label3;
+        private TextBox txtusername;
+        private TextBox txtpassword;
         private Label label4;
-        private TextBox txtusername1;
-        private TextBox txtusername2;
+        private Label label5;
+        private Panel panel1;
     }
 }

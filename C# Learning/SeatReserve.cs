@@ -30,7 +30,7 @@ namespace C__Learning
         {
             try
             {
-                ConnectionManage.OpenConecction();
+                ConnectionManage.OpenConnection();
                 SqlConnection connection = ConnectionManage.GetSqlConnection();
             }
             catch (Exception ex)

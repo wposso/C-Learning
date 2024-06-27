@@ -10,34 +10,82 @@ namespace C__Learning.Class
     internal class Login
     {
         private LoginRegister loginregister;
+        private Dictionary<string, Button> listadoBotones;
+        private Dictionary<string, TextBox> ListadoTextbox;
 
-        public Login(LoginRegister loginRegister) 
+        public Login(LoginRegister loginRegister,Dictionary<string, Button> listadoBotones, Dictionary<string, TextBox> ListadoTextbox) 
         {
             this.loginregister = loginRegister;
+            this.listadoBotones = listadoBotones;
+            this.ListadoTextbox = ListadoTextbox;
+        }
+
+        private Button singin;
+        private void listadoBotonesDefinition(object sender, EventArgs e) 
+        {
+            Button singin = null;
+
+            if (listadoBotones.ContainsKey("btnsingin"))
+            {
+                singin = listadoBotones["btnsingin"];
+            }
+        }
+
+        //private TextBox txtusername;
+        //private TextBox txtpassword;
+        private void listadoTextboxDefinition(object sender, EventArgs e) 
+        {
+            //TextBox txtusername = null;
+            //TextBox txtpassword = null;
+
+            //if (ListadoTextbox.ContainsKey("txtusername"))
+            //{
+            //    txtusername = ListadoTextbox["txtusername"];
+            //}
+            //if (ListadoTextbox.ContainsKey("txtPassword"))
+            //{
+            //    txtpassword = ListadoTextbox["txtpassword"];
+            //}
         }
 
         public void loginmethod(object sender, EventArgs e)
         {
-            string username = loginregister.txtusername.Text;
-            string password = loginregister.txtpassword.Text;
+            TextBox txtusername = null;
+            TextBox txtpassword = null;
+
+            if (ListadoTextbox.ContainsKey("txtusername"))
+            {
+                txtusername = ListadoTextbox["txtusername"];
+            }
+            if (ListadoTextbox.ContainsKey("txtpassword"))
+            {
+                txtpassword = ListadoTextbox["txtpassword"];
+            }
 
             try
             {
-                string code = ("select username, password from user where username='"+username+"' and password='"+password+"'");
-                SqlCommand command = new SqlCommand(code, ConnectionManage.GetSqlConnection());
-                SqlDataReader reader = command.ExecuteReader();
-                
+                string code = ("select username, password from users where username=@txtusername and password=@txtpassword");
+                using (SqlConnection connection = ConnectionManage.GetSqlConnection()) 
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(code, connection)) 
+                    {
+                        command.Parameters.AddWithValue("txtusername", txtusername.Text);
+                        command.Parameters.AddWithValue("txtpassword", txtpassword.Text);
+                        SqlDataReader reader = command.ExecuteReader();
 
-                if (reader.Read()) 
-                {
-                    MessageBox.Show("login success");
-                }
-                else 
-                {
-                    MessageBox.Show("Connection Failed");
-                }
-                reader.Close();
-                
+                        if (reader.Read())
+                        {
+                            MessageBox.Show("usuario encontrado");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Usuario no encontrado");
+                        }
+                        reader.Close();
+                    }
+                    ConnectionManage.CloseConnection();
+                } 
             }
             catch (Exception ex)
             {

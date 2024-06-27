@@ -11,29 +11,29 @@ namespace C__Learning.Class
 {
     internal class ConnectionManage
     {
-        private static string connectionsring = ("server=192.168.1.184; database=mydatabase; integrated security=true");
+        private static string connectionString = "server=192.168.1.184; database=mydatabase; integrated security=true";
         private static SqlConnection connectionSQL;
 
         public static SqlConnection GetSqlConnection()
         {
-            if (connectionSQL == null)
+            if (connectionSQL == null) 
             {
-                connectionSQL = new SqlConnection(connectionsring);
+                connectionSQL = new SqlConnection(connectionString);
             }
             return connectionSQL;
         } 
-        public static void OpenConecction()
+        public static void OpenConnection()
         {
-            if (connectionSQL == null) 
+            if(connectionSQL == null) 
             {
-                connectionSQL = new SqlConnection(connectionsring);  
+                connectionSQL = new SqlConnection(connectionString);
             }
             if (connectionSQL.State == System.Data.ConnectionState.Closed) 
             {
                 connectionSQL.Open();
             }
         }
-        private static void CloseConecction() 
+        public static void CloseConnection() 
         {
             if (connectionSQL != null && connectionSQL.State == System.Data.ConnectionState.Open) 
             {
