@@ -11,7 +11,7 @@ namespace C__Learning.Class
 {
     internal class ConnectionDatabase
     {
-        private static string connectionString = "server=adminsystem; database=mydatabase; integrated security=true";
+        private static string connectionString = "server=mydatabase.c9kgs2ucojqe.us-east-2.rds.amazonaws.com; database=Learning_C#; user=admin; password=masterkey;";
         private static SqlConnection connectionSQL;
 
         public static SqlConnection GetSqlConnection()

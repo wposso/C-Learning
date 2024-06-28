@@ -9,14 +9,14 @@ namespace C__Learning.Class
 {
     internal class Login
     {
-        private ScreenRegister loginregister;
+        private ScreenLogin screenRegister;
         private Dictionary<string, Button> listadoBotones;
         private Dictionary<string, TextBox> ListadoTextbox;
         private DeleteFields deleteFields;
 
-        public Login(ScreenRegister loginRegister,Dictionary<string, Button> listadoBotones, Dictionary<string, TextBox> ListadoTextbox,DeleteFields deleteFields) 
+        public Login(ScreenLogin screenRegister, Dictionary<string, Button> listadoBotones, Dictionary<string, TextBox> ListadoTextbox,DeleteFields deleteFields) 
         {
-            this.loginregister = loginRegister;
+            this.screenRegister = screenRegister;
             this.listadoBotones = listadoBotones;
             this.ListadoTextbox = ListadoTextbox;
             this.deleteFields = deleteFields;

@@ -8,15 +8,14 @@ namespace C__Learning.Class
 {
     internal class DeleteFields
     {
-        private ScreenRegister screenRegister;
+        private ScreenLogin screenRegister;
         private Dictionary<string, TextBox> textBoxs;
 
-        public DeleteFields(ScreenRegister screenRegister,Dictionary<string, TextBox>textBoxs ) 
+        public DeleteFields(ScreenLogin screenRegister,Dictionary<string, TextBox>textBoxs ) 
         {
             this.screenRegister = screenRegister;
             this.textBoxs = textBoxs;
             textDefinition();
-           
         }
 
         private TextBox txtusername;
@@ -38,8 +37,15 @@ namespace C__Learning.Class
 
         public void emptyFields(object sender, EventArgs e) 
         {
-            txtusername.Clear();
-            txtpassword.Clear();
+            if (txtusername != null) 
+            {
+                txtusername.Clear();
+            }
+            if(txtpassword != null) 
+            {
+                txtpassword.Clear();
+            }
+            
         }
 
     }

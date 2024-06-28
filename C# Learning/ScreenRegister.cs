@@ -1,5 +1,4 @@
-﻿using C__Learning.Class;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,60 +12,10 @@ namespace C__Learning
 {
     public partial class ScreenRegister : Form
     {
-        private ScreenRegister loginRegister;
-        private Login login;
-        private DeleteFields deleteFields;
-
         public ScreenRegister()
         {
             InitializeComponent();
-            InitializeLogin();
-            ListadoBotones();
-            ListadoTextbox();
-
-            login = new Login(this, diccionarioBotones, diccionarioTextbox,deleteFields );
-            deleteFields = new DeleteFields(this,diccionarioTextbox);
-        }
-
-        private void InitializeLogin()
-        {
             
-        }
-
-        public Dictionary<string, Button> diccionarioBotones;
-        private void ListadoBotones()
-        {
-            diccionarioBotones = new Dictionary<string, Button>
-            {
-                {"btnsignin",btnsignin }
-            };
-        }
-
-        private Dictionary<string, TextBox> diccionarioTextbox;
-        private void ListadoTextbox()
-        {
-            diccionarioTextbox = new Dictionary<string, TextBox>
-            {
-                {"txtusername",txtusername},
-                {"txtpassword",txtpassword},
-            };
-        }
-
-        private void btnsignin_Click(object sender, EventArgs e)
-        {
-            login.loginmethod(sender, e);
-        }
-
-        private void chpassword_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chpassword.Checked) 
-            {
-                txtpassword.PasswordChar = '\0';
-            }
-            else 
-            {
-                txtpassword.PasswordChar = '•';
-            }
         }
     }
 }
