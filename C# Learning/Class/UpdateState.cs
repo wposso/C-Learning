@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace C__Learning.Class
 {
-    internal class UpdateStateMethod
+    internal class UpdateState
     {
         private Dictionary<string, Button> buttonMap;
 
         public void updateStateMethod(object sender, EventArgs e) 
         {
             string code = ("select code,isbusy from airplane");
-            SqlCommand command = new SqlCommand(code,ConnectionManage.GetSqlConnection());
+            SqlCommand command = new SqlCommand(code,ConnectionDatabase.GetSqlConnection());
             SqlDataReader readr = command.ExecuteReader();
 
             while (readr.Read()) 

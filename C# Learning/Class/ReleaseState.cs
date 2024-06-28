@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace C__Learning.Class
 {
-    public class ReleaseMethod
+    public class ReleaseState
     {
           
 
-        public ReleaseMethod() 
+        public ReleaseState() 
         {
             
         }

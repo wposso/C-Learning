@@ -1,6 +1,6 @@
 ﻿namespace C__Learning
 {
-    partial class SeatReserve
+    partial class ScreenReserve
     {
         /// <summary>
         ///  Required designer variable.

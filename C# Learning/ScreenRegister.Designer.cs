@@ -1,6 +1,6 @@
 ﻿namespace C__Learning
 {
-    partial class LoginRegister
+    partial class ScreenRegister
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginRegister));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScreenRegister));
             label1 = new Label();
             label2 = new Label();
             btnsignin = new Button();
@@ -159,7 +159,7 @@
             Controls.Add(label1);
             Name = "LoginRegister";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "LoginRegister";
+            Text = "👨🏻‍💻Screen Register";
             ResumeLayout(false);
             PerformLayout();
         }

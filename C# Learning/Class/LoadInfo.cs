@@ -21,7 +21,7 @@ namespace C__Learning.Class
             try
             {
                 string code = ("select code, isbusy from airplane");
-                SqlCommand command = new SqlCommand(code,ConnectionManage.GetSqlConnection());
+                SqlCommand command = new SqlCommand(code,ConnectionDatabase.GetSqlConnection());
                 SqlDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())

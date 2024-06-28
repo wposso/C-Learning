@@ -11,24 +11,26 @@ using System.Windows.Forms;
 
 namespace C__Learning
 {
-    public partial class LoginRegister : Form
+    public partial class ScreenRegister : Form
     {
-        private LoginRegister loginRegister;
+        private ScreenRegister loginRegister;
         private Login login;
+        private DeleteFields deleteFields;
 
-        public LoginRegister()
+        public ScreenRegister()
         {
             InitializeComponent();
             InitializeLogin();
             ListadoBotones();
             ListadoTextbox();
 
-            login = new Login(this, diccionarioBotones, diccionarioTextbox);
+            login = new Login(this, diccionarioBotones, diccionarioTextbox,deleteFields );
+            deleteFields = new DeleteFields(this,diccionarioTextbox);
         }
 
         private void InitializeLogin()
         {
-            login = new Login(this, diccionarioBotones, diccionarioTextbox);
+            
         }
 
         public Dictionary<string, Button> diccionarioBotones;

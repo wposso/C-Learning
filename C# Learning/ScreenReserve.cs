@@ -5,14 +5,14 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace C__Learning
 {
-    public partial class SeatReserve : Form
+    public partial class ScreenReserve : Form
     {
         private Dictionary<string, Button> buttonMap;
         private LoadInfo loadMethod;
-        private UpdateStateMethod updateState;
+        private UpdateState updateState;
 
         private Button button;
-        public SeatReserve()
+        public ScreenReserve()
         {
             InitializeComponent();
             InitializeDatabaseConnection();
@@ -30,8 +30,8 @@ namespace C__Learning
         {
             try
             {
-                ConnectionManage.OpenConnection();
-                SqlConnection connection = ConnectionManage.GetSqlConnection();
+                ConnectionDatabase.OpenConnection();
+                SqlConnection connection = ConnectionDatabase.GetSqlConnection();
             }
             catch (Exception ex)
             {
@@ -54,7 +54,7 @@ namespace C__Learning
         }
         private void InitializeUpdateStatus()
         {
-            updateState = new UpdateStateMethod();
+            updateState = new UpdateState();
         }
 
         private void button4_Click(object sender, EventArgs e)

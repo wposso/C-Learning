@@ -9,9 +9,9 @@ using System.Data.SqlClient;
 
 namespace C__Learning.Class
 {
-    internal class ConnectionManage
+    internal class ConnectionDatabase
     {
-        private static string connectionString = "server=192.168.1.184; database=mydatabase; integrated security=true";
+        private static string connectionString = "server=adminsystem; database=mydatabase; integrated security=true";
         private static SqlConnection connectionSQL;
 
         public static SqlConnection GetSqlConnection()

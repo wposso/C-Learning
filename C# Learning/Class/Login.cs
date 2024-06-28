@@ -9,15 +9,17 @@ namespace C__Learning.Class
 {
     internal class Login
     {
-        private LoginRegister loginregister;
+        private ScreenRegister loginregister;
         private Dictionary<string, Button> listadoBotones;
         private Dictionary<string, TextBox> ListadoTextbox;
+        private DeleteFields deleteFields;
 
-        public Login(LoginRegister loginRegister,Dictionary<string, Button> listadoBotones, Dictionary<string, TextBox> ListadoTextbox) 
+        public Login(ScreenRegister loginRegister,Dictionary<string, Button> listadoBotones, Dictionary<string, TextBox> ListadoTextbox,DeleteFields deleteFields) 
         {
             this.loginregister = loginRegister;
             this.listadoBotones = listadoBotones;
             this.ListadoTextbox = ListadoTextbox;
+            this.deleteFields = deleteFields;
         }
 
         private Button singin;
@@ -65,7 +67,7 @@ namespace C__Learning.Class
             try
             {
                 string code = ("select username, password from users where username=@txtusername and password=@txtpassword");
-                using (SqlConnection connection = ConnectionManage.GetSqlConnection()) 
+                using (SqlConnection connection = ConnectionDatabase.GetSqlConnection()) 
                 {
                     connection.Open();
                     using (SqlCommand command = new SqlCommand(code, connection)) 
@@ -83,8 +85,9 @@ namespace C__Learning.Class
                             MessageBox.Show("Usuario no encontrado");
                         }
                         reader.Close();
+                        deleteFields.emptyFields(sender, e);
                     }
-                    ConnectionManage.CloseConnection();
+                    ConnectionDatabase.CloseConnection();
                 } 
             }
             catch (Exception ex)
