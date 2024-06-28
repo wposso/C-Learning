@@ -22,8 +22,6 @@ namespace C__Learning.Class
         private TextBox txtpassword;
         private void textDefinition() 
         {
-            //TextBox txtusername = null;
-            //TextBox txtpassword = null;
 
             if (textBoxs.ContainsKey("txtusername"))
             {

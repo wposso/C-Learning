@@ -14,24 +14,29 @@ namespace C__Learning
 {
     public partial class ScreenLogin : Form
     {
-        private ScreenLogin loginRegister;
+        //...Class
         private Login login;
         private DeleteFields deleteFields;
 
+        //...Screens
+        private ScreenRegister screenRegister;
         public ScreenLogin()
         {
             InitializeComponent();
             InitializeLogin();
             ListadoBotones();
             ListadoTextbox();
+            ListadoPanel();
 
             deleteFields = new DeleteFields(this, diccionarioTextbox);
-            login = new Login(this, diccionarioBotones, diccionarioTextbox,deleteFields);
+            login = new Login(this, diccionarioBotones, diccionarioTextbox, deleteFields);
+            panelContainer = new PanelContainer(this,diccionarioPanel);
+
         }
 
         private void InitializeLogin()
         {
-            
+
         }
 
         public Dictionary<string, Button> diccionarioBotones;
@@ -53,6 +58,15 @@ namespace C__Learning
             };
         }
 
+        private Dictionary<string, Panel> diccionarioPanel;
+        private void ListadoPanel() 
+        {
+            diccionarioPanel = new Dictionary<string, Panel> 
+            {
+                {"pnlContainer",pnlContainer},
+            };
+        }
+
         private void btnsignin_Click(object sender, EventArgs e)
         {
             login.loginmethod(sender, e);
@@ -60,14 +74,22 @@ namespace C__Learning
 
         private void chpassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (chpassword.Checked) 
+            if (chpassword.Checked)
             {
                 txtpassword.PasswordChar = '\0';
             }
-            else 
+            else
             {
                 txtpassword.PasswordChar = '•';
             }
+        }
+
+
+        private PanelContainer panelContainer;
+        private void lblLogin_Click(object sender, EventArgs e)
+        {
+            screenRegister = new ScreenRegister();
+            panelContainer.panelContainer(screenRegister);
         }
     }
 }

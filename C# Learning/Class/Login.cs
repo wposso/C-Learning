@@ -33,22 +33,7 @@ namespace C__Learning.Class
             }
         }
 
-        //private TextBox txtusername;
-        //private TextBox txtpassword;
-        private void listadoTextboxDefinition(object sender, EventArgs e) 
-        {
-            //TextBox txtusername = null;
-            //TextBox txtpassword = null;
-
-            //if (ListadoTextbox.ContainsKey("txtusername"))
-            //{
-            //    txtusername = ListadoTextbox["txtusername"];
-            //}
-            //if (ListadoTextbox.ContainsKey("txtPassword"))
-            //{
-            //    txtpassword = ListadoTextbox["txtpassword"];
-            //}
-        }
+        
 
         public void loginmethod(object sender, EventArgs e)
         {
@@ -85,7 +70,7 @@ namespace C__Learning.Class
                             MessageBox.Show("Usuario no encontrado");
                         }
                         reader.Close();
-                        deleteFields.emptyFields(sender, e);
+                        
                     }
                     ConnectionDatabase.CloseConnection();
                 } 
@@ -96,7 +81,7 @@ namespace C__Learning.Class
                 MessageBox.Show("has ocurred an error with database", ex.Message);
 
             }
-
+            deleteFields.emptyFields(sender, e);
         }
     }
 }
