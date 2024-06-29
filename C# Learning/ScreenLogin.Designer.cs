@@ -230,7 +230,6 @@
             // 
             btnToken.BackgroundImageLayout = ImageLayout.Stretch;
             btnToken.Cursor = Cursors.Hand;
-            btnToken.FlatAppearance.BorderColor = Color.Black;
             btnToken.FlatAppearance.MouseDownBackColor = Color.White;
             btnToken.FlatAppearance.MouseOverBackColor = Color.White;
             btnToken.FlatStyle = FlatStyle.Flat;

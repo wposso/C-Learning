@@ -17,6 +17,7 @@ namespace C__Learning
         //...Class
         private Login login;
         private DeleteFields deleteFields;
+        private VisiblePassword visiblePassword;
 
         //...Screens
         private ScreenRegister screenRegister;
@@ -27,11 +28,16 @@ namespace C__Learning
             ListadoBotones();
             ListadoTextbox();
             ListadoPanel();
+            ListadoLabel();
 
             deleteFields = new DeleteFields(this, diccionarioTextbox);
             login = new Login(this, diccionarioBotones, diccionarioTextbox, deleteFields);
             panelContainer = new PanelContainer(this, diccionarioPanel);
+            visiblePassword = new VisiblePassword(this,diccionarioTextbox,diccionarioLabel);
 
+            txtpassword.TextChanged += new EventHandler(visiblePassword.showIconPass);
+            lblShowPass.MouseEnter += new EventHandler(visiblePassword.mouseEnter);
+            lblShowPass.MouseLeave += new EventHandler(visiblePassword.mouseLeave);
         }
 
         private void InitializeLogin()
@@ -67,6 +73,15 @@ namespace C__Learning
             };
         }
 
+        private Dictionary<string, Label> diccionarioLabel;
+        private void ListadoLabel() 
+        {
+            diccionarioLabel = new Dictionary<string, Label> 
+            {
+                {"lblShowPass",lblShowPass },
+            };
+        }
+
         private void btnsignin_Click(object sender, EventArgs e)
         {
             login.loginmethod(sender, e);
@@ -86,33 +101,12 @@ namespace C__Learning
 
         private void txtusername_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void visible(object sender, EventArgs e)
-        {
-            if (lblShowPass.Visible == false)
-            {
-                lblShowPass.Visible = true;
-            }
-            if(lblShowPass.Visible == false) 
-            {
-                lblShowPass.Visible = true;
-            }
-            txtpassword.TabIndexChanged += new EventHandler(visible);
-
+           
         }
 
         private void lblShowPass_Click(object sender, EventArgs e)
         {
-            if (lblShowPass.Enabled)
-            {
-                txtpassword.PasswordChar = '\0';
-            }
-            else
-            {
-                txtpassword.PasswordChar = '•';
-            }
         }
+
     }
 }
