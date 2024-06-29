@@ -30,7 +30,7 @@ namespace C__Learning
 
             deleteFields = new DeleteFields(this, diccionarioTextbox);
             login = new Login(this, diccionarioBotones, diccionarioTextbox, deleteFields);
-            panelContainer = new PanelContainer(this,diccionarioPanel);
+            panelContainer = new PanelContainer(this, diccionarioPanel);
 
         }
 
@@ -59,9 +59,9 @@ namespace C__Learning
         }
 
         private Dictionary<string, Panel> diccionarioPanel;
-        private void ListadoPanel() 
+        private void ListadoPanel()
         {
-            diccionarioPanel = new Dictionary<string, Panel> 
+            diccionarioPanel = new Dictionary<string, Panel>
             {
                 {"pnlContainer",pnlContainer},
             };
@@ -72,9 +72,40 @@ namespace C__Learning
             login.loginmethod(sender, e);
         }
 
-        private void chpassword_CheckedChanged(object sender, EventArgs e)
+        private PanelContainer panelContainer;
+        private void lblLogin_Click(object sender, EventArgs e)
         {
-            if (chpassword.Checked)
+            screenRegister = new ScreenRegister();
+            panelContainer.panelContainer(screenRegister);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void txtusername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void visible(object sender, EventArgs e)
+        {
+            if (lblShowPass.Visible == false)
+            {
+                lblShowPass.Visible = true;
+            }
+            if(lblShowPass.Visible == false) 
+            {
+                lblShowPass.Visible = true;
+            }
+            txtpassword.TabIndexChanged += new EventHandler(visible);
+
+        }
+
+        private void lblShowPass_Click(object sender, EventArgs e)
+        {
+            if (lblShowPass.Enabled)
             {
                 txtpassword.PasswordChar = '\0';
             }
@@ -82,14 +113,6 @@ namespace C__Learning
             {
                 txtpassword.PasswordChar = '•';
             }
-        }
-
-
-        private PanelContainer panelContainer;
-        private void lblLogin_Click(object sender, EventArgs e)
-        {
-            screenRegister = new ScreenRegister();
-            panelContainer.panelContainer(screenRegister);
         }
     }
 }

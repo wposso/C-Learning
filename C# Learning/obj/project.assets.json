@@ -1603,19 +1603,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\soporte MPOS\\.nuget\\packages\\": {}
+    "C:\\Users\\willi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\soporte MPOS\\Downloads\\Clone\\C-Learning\\C# Learning\\C# Learning.csproj",
+      "projectUniqueName": "C:\\Users\\willi\\Downloads\\Clone\\C-Learning\\C# Learning\\C# Learning.csproj",
       "projectName": "C# Learning",
-      "projectPath": "C:\\Users\\soporte MPOS\\Downloads\\Clone\\C-Learning\\C# Learning\\C# Learning.csproj",
-      "packagesPath": "C:\\Users\\soporte MPOS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\soporte MPOS\\Downloads\\Clone\\C-Learning\\C# Learning\\obj\\",
+      "projectPath": "C:\\Users\\willi\\Downloads\\Clone\\C-Learning\\C# Learning\\C# Learning.csproj",
+      "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\willi\\Downloads\\Clone\\C-Learning\\C# Learning\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\soporte MPOS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1623,7 +1623,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1675,7 +1674,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
