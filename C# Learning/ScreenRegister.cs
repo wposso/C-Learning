@@ -43,7 +43,12 @@ namespace C__Learning
 
         private void btnsignin_Click(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void ScreenRegister_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

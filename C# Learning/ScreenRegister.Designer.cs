@@ -30,57 +30,45 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScreenRegister));
             pnlLoad = new Panel();
-            label4 = new Label();
-            txtConfirmPass = new TextBox();
             label5 = new Label();
             panel1 = new Panel();
             lblalready = new Label();
-            txtNewPass = new TextBox();
-            txtNewUser = new TextBox();
             label3 = new Label();
-            chpassword = new CheckBox();
             btnsave = new Button();
+            lblShowPass = new Label();
+            txtpassword = new TextBox();
+            txtusername = new TextBox();
             label2 = new Label();
             label1 = new Label();
+            label4 = new Label();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            label6 = new Label();
+            label7 = new Label();
             pnlLoad.SuspendLayout();
             SuspendLayout();
             // 
             // pnlLoad
             // 
             pnlLoad.Controls.Add(label4);
-            pnlLoad.Controls.Add(txtConfirmPass);
+            pnlLoad.Controls.Add(textBox1);
+            pnlLoad.Controls.Add(textBox2);
+            pnlLoad.Controls.Add(label6);
+            pnlLoad.Controls.Add(label7);
+            pnlLoad.Controls.Add(lblShowPass);
             pnlLoad.Controls.Add(label5);
+            pnlLoad.Controls.Add(txtpassword);
             pnlLoad.Controls.Add(panel1);
+            pnlLoad.Controls.Add(txtusername);
             pnlLoad.Controls.Add(lblalready);
-            pnlLoad.Controls.Add(txtNewPass);
-            pnlLoad.Controls.Add(txtNewUser);
-            pnlLoad.Controls.Add(label3);
-            pnlLoad.Controls.Add(chpassword);
-            pnlLoad.Controls.Add(btnsave);
             pnlLoad.Controls.Add(label2);
+            pnlLoad.Controls.Add(label3);
             pnlLoad.Controls.Add(label1);
-            pnlLoad.Location = new Point(1, 1);
+            pnlLoad.Controls.Add(btnsave);
+            pnlLoad.Location = new Point(12, 12);
             pnlLoad.Name = "pnlLoad";
-            pnlLoad.Size = new Size(326, 683);
+            pnlLoad.Size = new Size(387, 803);
             pnlLoad.TabIndex = 14;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(49, 446);
-            label4.Name = "label4";
-            label4.Size = new Size(163, 20);
-            label4.TabIndex = 14;
-            label4.Text = "Confirmation password";
-            // 
-            // txtConfirmPass
-            // 
-            txtConfirmPass.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtConfirmPass.Location = new Point(49, 469);
-            txtConfirmPass.Name = "txtConfirmPass";
-            txtConfirmPass.PasswordChar = '•';
-            txtConfirmPass.Size = new Size(241, 34);
-            txtConfirmPass.TabIndex = 13;
             // 
             // label5
             // 
@@ -107,29 +95,12 @@
             lblalready.Cursor = Cursors.Hand;
             lblalready.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblalready.ForeColor = SystemColors.Highlight;
-            lblalready.Location = new Point(91, 649);
+            lblalready.Location = new Point(130, 775);
             lblalready.Name = "lblalready";
             lblalready.Size = new Size(142, 20);
             lblalready.TabIndex = 10;
             lblalready.Text = "Already registered?";
             lblalready.Click += lblLogin_Click;
-            // 
-            // txtNewPass
-            // 
-            txtNewPass.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNewPass.Location = new Point(47, 400);
-            txtNewPass.Name = "txtNewPass";
-            txtNewPass.PasswordChar = '•';
-            txtNewPass.Size = new Size(241, 34);
-            txtNewPass.TabIndex = 9;
-            // 
-            // txtNewUser
-            // 
-            txtNewUser.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNewUser.Location = new Point(47, 337);
-            txtNewUser.Name = "txtNewUser";
-            txtNewUser.Size = new Size(241, 34);
-            txtNewUser.TabIndex = 8;
             // 
             // label3
             // 
@@ -141,16 +112,6 @@
             label3.TabIndex = 6;
             label3.Text = "Create Account";
             // 
-            // chpassword
-            // 
-            chpassword.AutoSize = true;
-            chpassword.Location = new Point(156, 509);
-            chpassword.Name = "chpassword";
-            chpassword.Size = new Size(134, 24);
-            chpassword.TabIndex = 5;
-            chpassword.Text = "Show password";
-            chpassword.UseVisualStyleBackColor = true;
-            // 
             // btnsave
             // 
             btnsave.BackColor = SystemColors.Highlight;
@@ -158,7 +119,7 @@
             btnsave.FlatStyle = FlatStyle.Flat;
             btnsave.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnsave.ForeColor = Color.White;
-            btnsave.Location = new Point(17, 579);
+            btnsave.Location = new Point(56, 705);
             btnsave.Name = "btnsave";
             btnsave.Size = new Size(285, 37);
             btnsave.TabIndex = 4;
@@ -166,33 +127,120 @@
             btnsave.UseVisualStyleBackColor = false;
             btnsave.Click += btnsignin_Click;
             // 
+            // lblShowPass
+            // 
+            lblShowPass.AutoSize = true;
+            lblShowPass.Cursor = Cursors.Hand;
+            lblShowPass.Font = new Font("Segoe UI Light", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblShowPass.ForeColor = SystemColors.ControlDarkDark;
+            lblShowPass.Location = new Point(323, 524);
+            lblShowPass.Name = "lblShowPass";
+            lblShowPass.Size = new Size(37, 25);
+            lblShowPass.TabIndex = 27;
+            lblShowPass.Text = "👁‍🗨";
+            lblShowPass.Visible = false;
+            // 
+            // txtpassword
+            // 
+            txtpassword.BorderStyle = BorderStyle.FixedSingle;
+            txtpassword.Font = new Font("Segoe UI", 13.8F);
+            txtpassword.ForeColor = Color.Black;
+            txtpassword.Location = new Point(26, 445);
+            txtpassword.Name = "txtpassword";
+            txtpassword.PasswordChar = '•';
+            txtpassword.Size = new Size(340, 38);
+            txtpassword.TabIndex = 26;
+            // 
+            // txtusername
+            // 
+            txtusername.BorderStyle = BorderStyle.FixedSingle;
+            txtusername.Font = new Font("Segoe UI", 13.8F);
+            txtusername.ForeColor = Color.Black;
+            txtusername.Location = new Point(26, 378);
+            txtusername.Name = "txtusername";
+            txtusername.Size = new Size(340, 38);
+            txtusername.TabIndex = 25;
+            // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(47, 379);
+            label2.Location = new Point(26, 422);
             label2.Name = "label2";
-            label2.Size = new Size(106, 20);
-            label2.TabIndex = 3;
-            label2.Text = "New password";
+            label2.Size = new Size(91, 20);
+            label2.TabIndex = 24;
+            label2.Text = "Documment";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(47, 314);
+            label1.Location = new Point(26, 355);
             label1.Name = "label1";
-            label1.Size = new Size(70, 20);
-            label1.TabIndex = 2;
-            label1.Text = "New user";
+            label1.Size = new Size(75, 20);
+            label1.TabIndex = 23;
+            label1.Text = "Username";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Cursor = Cursors.Hand;
+            label4.Font = new Font("Segoe UI Light", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.ControlDarkDark;
+            label4.Location = new Point(323, 591);
+            label4.Name = "label4";
+            label4.Size = new Size(37, 25);
+            label4.TabIndex = 32;
+            label4.Text = "👁‍🗨";
+            label4.Visible = false;
+            // 
+            // textBox1
+            // 
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Font = new Font("Segoe UI", 13.8F);
+            textBox1.ForeColor = Color.Black;
+            textBox1.Location = new Point(26, 584);
+            textBox1.Name = "textBox1";
+            textBox1.PasswordChar = '•';
+            textBox1.Size = new Size(340, 38);
+            textBox1.TabIndex = 31;
+            // 
+            // textBox2
+            // 
+            textBox2.BorderStyle = BorderStyle.FixedSingle;
+            textBox2.Font = new Font("Segoe UI", 13.8F);
+            textBox2.ForeColor = Color.Black;
+            textBox2.Location = new Point(26, 517);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(340, 38);
+            textBox2.TabIndex = 30;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(26, 562);
+            label6.Name = "label6";
+            label6.Size = new Size(132, 20);
+            label6.TabIndex = 29;
+            label6.Text = "Comfirm Password";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(32, 494);
+            label7.Name = "label7";
+            label7.Size = new Size(70, 20);
+            label7.TabIndex = 28;
+            label7.Text = "Password";
             // 
             // ScreenRegister
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(329, 686);
+            ClientSize = new Size(443, 853);
             Controls.Add(pnlLoad);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ScreenRegister";
             Text = "ScreenRegister";
+            Load += ScreenRegister_Load;
             pnlLoad.ResumeLayout(false);
             pnlLoad.PerformLayout();
             ResumeLayout(false);
@@ -202,15 +250,18 @@
         private Label label5;
         private Panel panel1;
         private Label lblalready;
-        private TextBox txtNewPass;
-        private TextBox txtNewUser;
         private Label label3;
-        private CheckBox chpassword;
         private Button btnsave;
+        public Panel pnlLoad;
+        private Label lblShowPass;
+        private TextBox txtpassword;
+        private TextBox txtusername;
         private Label label2;
         private Label label1;
-        public Panel pnlLoad;
         private Label label4;
-        private TextBox txtConfirmPass;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private Label label6;
+        private Label label7;
     }
 }
