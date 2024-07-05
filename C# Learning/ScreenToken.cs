@@ -15,18 +15,23 @@ namespace C__Learning
     {
         //...Class
         private ValidateToken validateToken;
-
+        private LoginToken loginToken;
         //...Screens
-        private ScreenLogin screenLogin;
+        
         public ScreenToken()
         {
             InitializeComponent();
             textBoxDictionary();
+            InitializeClass();
 
-            validateToken = new ValidateToken(this,textBoxList);
+        }
+        private void InitializeClass() 
+        {
+            validateToken = new ValidateToken(this, textBoxList);
+            loginToken = new LoginToken(this, textBoxList);
         }
 
-        private Dictionary<string, TextBox> textBoxList;
+        public Dictionary<string, TextBox> textBoxList;
         private void textBoxDictionary()
         {
             textBoxList = new Dictionary<string, TextBox> 

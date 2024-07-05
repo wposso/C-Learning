@@ -118,3 +118,4 @@ C:\Users\soporte MPOS\Downloads\Clone\C-Learning\C# Learning\obj\Debug\net8.0-wi
 C:\Users\soporte MPOS\Downloads\Clone\C-Learning\C# Learning\obj\Debug\net8.0-windows\C__Learning.ScreenLogin.resources
 C:\Users\willi\Downloads\Clone\C-Learning\C# Learning\obj\Debug\net8.0-windows\C__Learning.ScreenLogin.resources
 C:\Users\willi\Downloads\Clone\C-Learning\C# Learning\obj\Debug\net8.0-windows\C__Learning.ScreenToken.resources
+C:\Users\soporte MPOS\Downloads\Clone\C-Learning\C# Learning\obj\Debug\net8.0-windows\C__Learning.ScreenToken.resources

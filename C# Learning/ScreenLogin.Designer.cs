@@ -49,10 +49,6 @@
             label4 = new Label();
             lblLogin = new Label();
             btnClose = new Button();
-            txtDemo1 = new TextBox();
-            txtDemo2 = new TextBox();
-            txtDemo3 = new TextBox();
-            txtDemo4 = new TextBox();
             pnlContainer.SuspendLayout();
             pnlToken.SuspendLayout();
             SuspendLayout();
@@ -144,10 +140,6 @@
             // 
             // pnlContainer
             // 
-            pnlContainer.Controls.Add(txtDemo4);
-            pnlContainer.Controls.Add(txtDemo3);
-            pnlContainer.Controls.Add(txtDemo2);
-            pnlContainer.Controls.Add(txtDemo1);
             pnlContainer.Controls.Add(pnlToken);
             pnlContainer.Controls.Add(lblShowPass);
             pnlContainer.Controls.Add(label6);
@@ -303,34 +295,6 @@
             btnClose.UseVisualStyleBackColor = true;
             btnClose.Click += btnClose_Click;
             // 
-            // txtDemo1
-            // 
-            txtDemo1.Location = new Point(49, 642);
-            txtDemo1.Name = "txtDemo1";
-            txtDemo1.Size = new Size(29, 27);
-            txtDemo1.TabIndex = 21;
-            // 
-            // txtDemo2
-            // 
-            txtDemo2.Location = new Point(93, 642);
-            txtDemo2.Name = "txtDemo2";
-            txtDemo2.Size = new Size(29, 27);
-            txtDemo2.TabIndex = 24;
-            // 
-            // txtDemo3
-            // 
-            txtDemo3.Location = new Point(139, 642);
-            txtDemo3.Name = "txtDemo3";
-            txtDemo3.Size = new Size(29, 27);
-            txtDemo3.TabIndex = 25;
-            // 
-            // txtDemo4
-            // 
-            txtDemo4.Location = new Point(189, 642);
-            txtDemo4.Name = "txtDemo4";
-            txtDemo4.Size = new Size(29, 27);
-            txtDemo4.TabIndex = 26;
-            // 
             // ScreenLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -375,9 +339,5 @@
         private Button btnIconToken;
         private Label lblShowPass;
         private Panel pnlToken;
-        private TextBox txtDemo1;
-        private TextBox txtDemo4;
-        private TextBox txtDemo3;
-        private TextBox txtDemo2;
     }
 }

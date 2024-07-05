@@ -20,6 +20,7 @@ namespace C__Learning
         private VisiblePassword visiblePassword;
         private ValidateToken validateToken;
         private PanelContainer panelContainer;
+        private LoginToken loginToken;
 
         //...Screens
         private ScreenRegister screenRegister;
@@ -32,19 +33,25 @@ namespace C__Learning
             ListadoTextbox();
             ListadoPanel();
             ListadoLabel();
-            textBoxDictionary();
-
+            InitializeScreens();
+            InitializeClass();
+        }
+        private void InitializeScreens() 
+        {
+            screenToken = new ScreenToken();
+        }
+        private void InitializeClass() 
+        {
             deleteFields = new DeleteFields(this, diccionarioTextbox);
             login = new Login(this, diccionarioBotones, diccionarioTextbox, deleteFields);
             panelContainer = new PanelContainer(this, diccionarioPanel);
             visiblePassword = new VisiblePassword(this, diccionarioTextbox, diccionarioLabel);
-            
+            loginToken = new LoginToken(screenToken,diccionarioTextbox);
+
             txtpassword.TextChanged += new EventHandler(visiblePassword.showIconPass);
             lblShowPass.MouseEnter += new EventHandler(visiblePassword.mouseEnter);
             lblShowPass.MouseLeave += new EventHandler(visiblePassword.mouseLeave);
-            
         }
-
         private void InitializeLogin()
         {
 
@@ -90,7 +97,9 @@ namespace C__Learning
 
         private void btnsignin_Click(object sender, EventArgs e)
         {
-            login.loginmethod(sender, e);
+            loginToken._LoginToken(sender,e);
+            //login.loginmethod(sender, e);
+            //MessageBox.Show("Token: " + _AllTextBox);
         }
 
         
@@ -122,8 +131,8 @@ namespace C__Learning
 
         private void label4_Click(object sender, EventArgs e)
         {
-                string tokenFields = txtToken1.Text + txtToken2.Text + txtToken3.Text + txtToken4.Text;
-                MessageBox.Show("Fields: " + tokenFields);
+                //string tokenFields = txtToken1.Text + txtToken2.Text + txtToken3.Text + txtToken4.Text;
+                //MessageBox.Show("Fields: " + tokenFields);
             
         }
 
@@ -147,37 +156,7 @@ namespace C__Learning
             this.pnlToken.Tag = B;
             B.Show();
         }
-        
-        private Dictionary<string, TextBox> textBoxList = new Dictionary<string, TextBox>();
-        private TextBox txtToken1;
-        private TextBox txtToken2;
-        private TextBox txtToken3;
-        private TextBox txtToken4;
-        private void textBoxDictionary()
-        {
-            txtToken1 = new TextBox();
-            txtToken2 = new TextBox();
-            txtToken3 = new TextBox();
-            txtToken4 = new TextBox();
-
-            if (textBoxList.ContainsKey("txtToken1"))
-            {
-                txtToken1 = textBoxList["txtToken1"];
-            }
-            if (textBoxList.ContainsKey("txtToken2"))
-            {
-                txtToken2 = textBoxList["txtToken2"];
-            }
-            if (textBoxList.ContainsKey("txtToken3"))
-            {
-                txtToken3 = textBoxList["txtToken3"];
-            }
-            if (textBoxList.ContainsKey("txtToken4")) 
-            {
-                txtToken4 = textBoxList["txtToken4"];
-            }
-        }
-    
-        
+       
+ 
     }
 }
