@@ -29,74 +29,65 @@
         private void InitializeComponent()
         {
             pnlToken = new Panel();
+            txtToken1 = new TextBox();
+            txtToken2 = new TextBox();
             txtToken3 = new TextBox();
             txtToken4 = new TextBox();
-            txtToken2 = new TextBox();
-            txtToken1 = new TextBox();
             pnlToken.SuspendLayout();
             SuspendLayout();
             // 
             // pnlToken
             // 
-            pnlToken.BackColor = Color.White;
-            pnlToken.Controls.Add(txtToken3);
             pnlToken.Controls.Add(txtToken4);
-            pnlToken.Controls.Add(txtToken2);
+            pnlToken.Controls.Add(txtToken3);
             pnlToken.Controls.Add(txtToken1);
+            pnlToken.Controls.Add(txtToken2);
             pnlToken.Location = new Point(0, 0);
             pnlToken.Name = "pnlToken";
             pnlToken.Size = new Size(357, 63);
             pnlToken.TabIndex = 24;
             // 
-            // txtToken3
+            // txtToken1
             // 
-            txtToken3.BorderStyle = BorderStyle.FixedSingle;
-            txtToken3.Font = new Font("Segoe UI Semilight", 16.2F);
-            txtToken3.Location = new Point(192, 9);
-            txtToken3.MaxLength = 1;
-            txtToken3.Name = "txtToken3";
-            txtToken3.Size = new Size(65, 43);
-            txtToken3.TabIndex = 28;
-            txtToken3.TextAlign = HorizontalAlignment.Center;
-            // 
-            // txtToken4
-            // 
-            txtToken4.BorderStyle = BorderStyle.FixedSingle;
-            txtToken4.Font = new Font("Segoe UI Semilight", 16.2F);
-            txtToken4.Location = new Point(284, 9);
-            txtToken4.MaxLength = 1;
-            txtToken4.Name = "txtToken4";
-            txtToken4.Size = new Size(65, 43);
-            txtToken4.TabIndex = 26;
-            txtToken4.TextAlign = HorizontalAlignment.Center;
+            txtToken1.Font = new Font("Segoe UI", 11F);
+            txtToken1.Location = new Point(61, 17);
+            txtToken1.MaxLength = 1;
+            txtToken1.Name = "txtToken1";
+            txtToken1.Size = new Size(42, 32);
+            txtToken1.TabIndex = 0;
             // 
             // txtToken2
             // 
-            txtToken2.BorderStyle = BorderStyle.FixedSingle;
-            txtToken2.Font = new Font("Segoe UI Semilight", 16.2F);
-            txtToken2.Location = new Point(102, 9);
+            txtToken2.Font = new Font("Segoe UI", 11F);
+            txtToken2.Location = new Point(119, 17);
             txtToken2.MaxLength = 1;
             txtToken2.Name = "txtToken2";
-            txtToken2.Size = new Size(65, 43);
-            txtToken2.TabIndex = 27;
-            txtToken2.TextAlign = HorizontalAlignment.Center;
+            txtToken2.Size = new Size(42, 32);
+            txtToken2.TabIndex = 25;
             // 
-            // txtToken1
+            // txtToken3
             // 
-            txtToken1.BorderStyle = BorderStyle.FixedSingle;
-            txtToken1.Font = new Font("Segoe UI Semilight", 16.2F);
-            txtToken1.Location = new Point(9, 9);
-            txtToken1.MaxLength = 1;
-            txtToken1.Name = "txtToken1";
-            txtToken1.Size = new Size(65, 43);
-            txtToken1.TabIndex = 25;
-            txtToken1.TextAlign = HorizontalAlignment.Center;
+            txtToken3.Font = new Font("Segoe UI", 11F);
+            txtToken3.Location = new Point(182, 17);
+            txtToken3.MaxLength = 1;
+            txtToken3.Name = "txtToken3";
+            txtToken3.Size = new Size(42, 32);
+            txtToken3.TabIndex = 26;
+            // 
+            // txtToken4
+            // 
+            txtToken4.Font = new Font("Segoe UI", 11F);
+            txtToken4.Location = new Point(241, 17);
+            txtToken4.MaxLength = 1;
+            txtToken4.Name = "txtToken4";
+            txtToken4.Size = new Size(42, 32);
+            txtToken4.TabIndex = 27;
             // 
             // ScreenToken
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(357, 64);
+            ClientSize = new Size(358, 64);
             Controls.Add(pnlToken);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ScreenToken";
@@ -109,9 +100,9 @@
         #endregion
 
         private Panel pnlToken;
-        private TextBox txtToken1;
         private TextBox txtToken4;
-        private TextBox txtToken2;
         private TextBox txtToken3;
+        private TextBox txtToken1;
+        private TextBox txtToken2;
     }
 }

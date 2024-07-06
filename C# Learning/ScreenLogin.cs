@@ -14,17 +14,14 @@ namespace C__Learning
 {
     public partial class ScreenLogin : Form
     {
-        //...Class
         private Login login;
         private DeleteFields deleteFields;
         private VisiblePassword visiblePassword;
         private ValidateToken validateToken;
         private PanelContainer panelContainer;
-        private LoginToken loginToken;
-
-        //...Screens
+        private LoginToken _loginToken;
         private ScreenRegister screenRegister;
-        private ScreenToken screenToken;
+        private ScreenToken _screenToken;
         public ScreenLogin()
         {
             InitializeComponent();
@@ -35,10 +32,11 @@ namespace C__Learning
             ListadoLabel();
             InitializeScreens();
             InitializeClass();
+            InitializeEvents();
         }
         private void InitializeScreens() 
         {
-            screenToken = new ScreenToken();
+            _screenToken = new ScreenToken();
         }
         private void InitializeClass() 
         {
@@ -46,12 +44,16 @@ namespace C__Learning
             login = new Login(this, diccionarioBotones, diccionarioTextbox, deleteFields);
             panelContainer = new PanelContainer(this, diccionarioPanel);
             visiblePassword = new VisiblePassword(this, diccionarioTextbox, diccionarioLabel);
-            loginToken = new LoginToken(screenToken,diccionarioTextbox);
-
+            _loginToken = new LoginToken(_screenToken);
+            
+        }
+        private void InitializeEvents() 
+        {
             txtpassword.TextChanged += new EventHandler(visiblePassword.showIconPass);
             lblShowPass.MouseEnter += new EventHandler(visiblePassword.mouseEnter);
             lblShowPass.MouseLeave += new EventHandler(visiblePassword.mouseLeave);
         }
+
         private void InitializeLogin()
         {
 
@@ -95,17 +97,20 @@ namespace C__Learning
             };
         }
 
+        private bool useLoginToken = true;
         private void btnsignin_Click(object sender, EventArgs e)
         {
-            loginToken._LoginToken(sender,e);
-            //login.loginmethod(sender, e);
-            //MessageBox.Show("Token: " + _AllTextBox);
+            if (useLoginToken) 
+            {
+                _loginToken._LoginToken(sender, e);
+            }
+            
+            login.loginmethod(sender,e);
         }
 
         
         private void lblLogin_Click(object sender, EventArgs e)
         {
-            screenRegister = new ScreenRegister();
             panelContainer.panelContainer(screenRegister);
         }
 
@@ -130,16 +135,12 @@ namespace C__Learning
 
 
         private void label4_Click(object sender, EventArgs e)
-        {
-                //string tokenFields = txtToken1.Text + txtToken2.Text + txtToken3.Text + txtToken4.Text;
-                //MessageBox.Show("Fields: " + tokenFields);
-            
+        { 
         }
 
         private void btnToken_Click(object sender, EventArgs e)
         {
-            screenToken = new ScreenToken();
-            panelToken(screenToken);
+            panelToken(_screenToken);
         }
 
         private void ScreenLogin_Load(object sender, EventArgs e)

@@ -13,33 +13,27 @@ namespace C__Learning
 {
     public partial class ScreenToken : Form
     {
-        //...Class
-        private ValidateToken validateToken;
-        private LoginToken loginToken;
-        //...Screens
-        
+        private LoginToken _loginToken;
         public ScreenToken()
         {
             InitializeComponent();
-            textBoxDictionary();
+            DictionarytxtBox();
             InitializeClass();
-
         }
+
         private void InitializeClass() 
         {
-            validateToken = new ValidateToken(this, textBoxList);
-            loginToken = new LoginToken(this, textBoxList);
+            _loginToken = new LoginToken(this);
         }
-
-        public Dictionary<string, TextBox> textBoxList;
-        private void textBoxDictionary()
+        public Dictionary<string, TextBox> _dictionarytxtBox;
+        private void DictionarytxtBox() 
         {
-            textBoxList = new Dictionary<string, TextBox> 
+            _dictionarytxtBox = new Dictionary<string, TextBox> 
             {
-                { "txtToken1",txtToken1},
-                { "txtToken2",txtToken2},
-                { "txtToken3",txtToken3},
-                { "txtToken4",txtToken4},
+                {"txtToken1", txtToken1 },
+                {"txtToken2", txtToken2 },
+                {"txtToken3", txtToken3 },
+                {"txtToken4", txtToken4 }
             };
         }
     }

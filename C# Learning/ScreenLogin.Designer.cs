@@ -39,7 +39,6 @@
             pnlLogo = new Panel();
             pnlContainer = new Panel();
             pnlToken = new Panel();
-            btnIconToken = new Button();
             btnToken = new Button();
             lblShowPass = new Label();
             label6 = new Label();
@@ -164,28 +163,11 @@
             // 
             // pnlToken
             // 
-            pnlToken.Controls.Add(btnIconToken);
             pnlToken.Controls.Add(btnToken);
             pnlToken.Location = new Point(14, 328);
             pnlToken.Name = "pnlToken";
             pnlToken.Size = new Size(357, 63);
             pnlToken.TabIndex = 23;
-            // 
-            // btnIconToken
-            // 
-            btnIconToken.BackColor = Color.White;
-            btnIconToken.BackgroundImageLayout = ImageLayout.Stretch;
-            btnIconToken.FlatAppearance.BorderSize = 0;
-            btnIconToken.FlatAppearance.MouseDownBackColor = Color.White;
-            btnIconToken.FlatAppearance.MouseOverBackColor = Color.White;
-            btnIconToken.FlatStyle = FlatStyle.Flat;
-            btnIconToken.Image = (Image)resources.GetObject("btnIconToken.Image");
-            btnIconToken.ImageAlign = ContentAlignment.MiddleLeft;
-            btnIconToken.Location = new Point(51, 16);
-            btnIconToken.Name = "btnIconToken";
-            btnIconToken.Size = new Size(42, 31);
-            btnIconToken.TabIndex = 20;
-            btnIconToken.UseVisualStyleBackColor = false;
             // 
             // btnToken
             // 
@@ -194,6 +176,7 @@
             btnToken.FlatAppearance.MouseDownBackColor = Color.White;
             btnToken.FlatAppearance.MouseOverBackColor = Color.White;
             btnToken.FlatStyle = FlatStyle.Flat;
+            btnToken.Image = (Image)resources.GetObject("btnToken.Image");
             btnToken.ImageAlign = ContentAlignment.MiddleLeft;
             btnToken.Location = new Point(7, 9);
             btnToken.Name = "btnToken";
@@ -336,7 +319,6 @@
         private Label label8;
         private Label label7;
         private Label label6;
-        private Button btnIconToken;
         private Label lblShowPass;
         private Panel pnlToken;
     }

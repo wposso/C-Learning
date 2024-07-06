@@ -119,3 +119,7 @@ C:\Users\soporte MPOS\Downloads\Clone\C-Learning\C# Learning\obj\Debug\net8.0-wi
 C:\Users\willi\Downloads\Clone\C-Learning\C# Learning\obj\Debug\net8.0-windows\C__Learning.ScreenLogin.resources
 C:\Users\willi\Downloads\Clone\C-Learning\C# Learning\obj\Debug\net8.0-windows\C__Learning.ScreenToken.resources
 C:\Users\soporte MPOS\Downloads\Clone\C-Learning\C# Learning\obj\Debug\net8.0-windows\C__Learning.ScreenToken.resources
+C:\Users\soporte MPOS\Downloads\Clone\C-Learning\C# Learning\bin\Debug\net8.0-windows\Guna.UI2.dll
+C:\Users\soporte MPOS\Downloads\Clone\C-Learning\C# Learning\bin\Debug\net8.0-windows\System.Management.dll
+C:\Users\soporte MPOS\Downloads\Clone\C-Learning\C# Learning\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
+C:\Users\soporte MPOS\Downloads\Clone\C-Learning\C# Learning\obj\Debug\net8.0-windows\C__Learning.demo.resources

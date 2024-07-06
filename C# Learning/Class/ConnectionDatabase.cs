@@ -16,18 +16,11 @@ namespace C__Learning.Class
 
         public static SqlConnection GetSqlConnection()
         {
-            if (connectionSQL == null) 
-            {
-                connectionSQL = new SqlConnection(connectionString);
-            }
+            connectionSQL = new SqlConnection(connectionString);
             return connectionSQL;
         } 
         public static void OpenConnection()
         {
-            if(connectionSQL == null) 
-            {
-                connectionSQL = new SqlConnection(connectionString);
-            }
             if (connectionSQL.State == System.Data.ConnectionState.Closed) 
             {
                 connectionSQL.Open();
@@ -35,7 +28,7 @@ namespace C__Learning.Class
         }
         public static void CloseConnection() 
         {
-            if (connectionSQL != null && connectionSQL.State == System.Data.ConnectionState.Open) 
+            if (connectionSQL.State == System.Data.ConnectionState.Open) 
             {
                 connectionSQL.Close();
             }
